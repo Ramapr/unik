@@ -22,9 +22,9 @@ time = np.linspace(0, s1, s1, endpoint=True)
 T = 5 # число циклов для режима S3
 alpha = 0
 if n < 1000:
-	alpha = 0.5
+    alpha = 0.5
 else:
-	alpha = 0.7
+    alpha = 0.7
 xtick = s1 // 60 + 10
 ytick = t_dop + t + 10
 
@@ -36,7 +36,7 @@ def ps1(Pn, t_oc, t_dop, alpha=0.5):
 	t_oc - температура фактич. охлаждающей среды
 	t_dop - допускаемое превышение температуры
 	alpha - коэф. потерь
-	"""
+    """
 	
     dt = 40 - t_oc 
     return Pn*(1 + dt*(1 + alpha) / t_dop)**0.5
